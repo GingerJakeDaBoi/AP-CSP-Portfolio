@@ -24,9 +24,9 @@ public class Project {
         ManagerWindow.getContentPane().add(Filesystem,BorderLayout.SOUTH);
 
         //Set the sizes of the tabs
-        resources.setPreferredSize(new Dimension(800, 400));
-        terminal.setPreferredSize(new Dimension(800,400));
-        Filesystem.setPreferredSize(new Dimension(800,400));
+        resources.setPreferredSize(new Dimension(800, 300));
+        terminal.setPreferredSize(new Dimension(800,300));
+        Filesystem.setPreferredSize(new Dimension(800,300));
         
         // Display the window.
         ManagerWindow.pack();
