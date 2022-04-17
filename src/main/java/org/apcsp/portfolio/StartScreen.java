@@ -14,7 +14,7 @@ public class StartScreen  extends ServerState {
     }
 
     public void draw(Graphics g) {
-        g.setColor(new Color(63, 63, 63, 255));
+        g.setColor(new Color(93, 93, 93, 255));
         g.fillRect(0,0,ServerPanel.width,ServerPanel.height);
         g.setColor(new Color(0, 0, 0, 255));
         g.fillRect(300,20,480,275);
