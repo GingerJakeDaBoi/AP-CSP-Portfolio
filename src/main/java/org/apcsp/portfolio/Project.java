@@ -3,6 +3,7 @@ package org.apcsp.portfolio;
 import java.awt.*;
 import javax.swing.*;
 
+// This class is used to open the JFrame, that's it.
 public class Project {
 
     public static void main(String[] args) {
