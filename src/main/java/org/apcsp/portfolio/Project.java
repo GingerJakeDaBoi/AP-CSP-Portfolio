@@ -12,22 +12,17 @@ public class Project {
 
         //System Resources text
         JLabel resources = new JLabel();
-        resources.setText("System Resources");        ManagerWindow.getContentPane().add(resources, BorderLayout.CENTER);
+        resources.setText("System Resources");
 
         //Terminal text
         JLabel terminal = new JLabel();
         terminal.setText("Terminal");
-        ManagerWindow.getContentPane().add(terminal,BorderLayout.NORTH);
 
         //Filesystem Text
         JLabel Filesystem = new JLabel();
         Filesystem.setText("Filesystem");
-        ManagerWindow.getContentPane().add(Filesystem,BorderLayout.SOUTH);
 
-        //Set the sizes of the tabs
-        resources.setPreferredSize(new Dimension(800, 300));
-        terminal.setPreferredSize(new Dimension(800,300));
-        Filesystem.setPreferredSize(new Dimension(800,300));
+        ManagerWindow.add(new ServerPanel(),BorderLayout.CENTER);
         
         // Display the window.
         ManagerWindow.pack();
