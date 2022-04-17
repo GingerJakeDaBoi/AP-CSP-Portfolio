@@ -1,3 +1,5 @@
+package org.apcsp.portfolio;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -10,8 +12,7 @@ public class Project {
 
         //System Resources text
         JLabel resources = new JLabel();
-        resources.setText("System Resources");
-        ManagerWindow.getContentPane().add(resources, BorderLayout.CENTER);
+        resources.setText("System Resources");        ManagerWindow.getContentPane().add(resources, BorderLayout.CENTER);
 
         //Terminal text
         JLabel terminal = new JLabel();
