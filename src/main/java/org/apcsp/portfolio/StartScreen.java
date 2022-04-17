@@ -22,7 +22,7 @@ public class StartScreen  extends ServerState {
         for(int i = 0; i < LABELS.length; i++) {
             g.setColor(Color.white);
 
-            g.setFont(new Font("Arial",Font.PLAIN,16));
+            g.setFont(new Font("Arial",Font.BOLD,16));
             g.drawString(LABELS[i],25,175+i*300);
         }
     }
