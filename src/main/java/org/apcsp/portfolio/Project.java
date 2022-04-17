@@ -10,21 +10,10 @@ public class Project {
         JFrame ManagerWindow = new JFrame("Server Manager");
         ManagerWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //System Resources text
-        JLabel resources = new JLabel();
-        resources.setText("System Resources");
-
-        //Terminal text
-        JLabel terminal = new JLabel();
-        terminal.setText("Terminal");
-
-        //Filesystem Text
-        JLabel Filesystem = new JLabel();
-        Filesystem.setText("Filesystem");
-
         ManagerWindow.add(new ServerPanel(),BorderLayout.CENTER);
         
         // Display the window.
+        ManagerWindow.setResizable(false);
         ManagerWindow.pack();
         ManagerWindow.setVisible(true);
     }
