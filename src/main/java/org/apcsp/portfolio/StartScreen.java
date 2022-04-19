@@ -24,7 +24,7 @@ public class StartScreen  extends ServerState {
             g.setColor(Color.white);
 
             g.setFont(new Font("Arial",Font.BOLD,16));
-            g.drawString(LABELS[i],25,175+i*300);
+            g.drawString(LABELS[i],25,150+i*300);
 
         }
     }
