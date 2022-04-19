@@ -3,7 +3,7 @@ package org.apcsp.portfolio;
 import java.awt.*;
 
 public class StartScreen  extends ServerState {
-    private final String[] LABELS={"Terminal","System Resources","File Manager"};
+    private final String[] LABELS={"System Resources","File Manager"};
 
     public StartScreen(ServerStateManager ssm){
         super(ssm);
@@ -14,11 +14,18 @@ public class StartScreen  extends ServerState {
     }
 
     public void draw(Graphics g) {
+        //Set the background color
         g.setColor(new Color(93, 93, 93, 255));
         g.fillRect(0,0,ServerPanel.width,ServerPanel.height);
-        g.setColor(new Color(0, 0, 0, 255));
-        g.fillRect(300,20,480,275);
 
+        //Draw the terminal button
+        g.setColor(new Color(62, 56, 56));
+        g.fillRect(0,0,100,35);
+        g.setColor(Color.white);
+        g.setFont(new Font("Arial",Font.BOLD,16));
+        g.drawString("Terminal",15,25);
+
+        //Draw the labels, look at the top for the list
         for(int i = 0; i < LABELS.length; i++) {
             g.setColor(Color.white);
 
