@@ -1,6 +1,8 @@
 package org.apcsp.portfolio;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.*;
 
@@ -13,8 +15,17 @@ public class Project {
 
         // Create a button for the terminal
 
-        JButton termButt = new JButton("Terminal");
-        Process process = Runtime.getRuntime().exec ("cmd /c start cmd.exe /K");
+        JButton termButton = new JButton("Terminal");
+        termButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Process process = Runtime.getRuntime().exec("cmd /c start cmd.exe /K");
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+
         ManagerWindow.add(new ServerPanel(),BorderLayout.CENTER);
 
 
