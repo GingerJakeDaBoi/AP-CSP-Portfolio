@@ -16,8 +16,15 @@ public class Project {
         ManagerWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JButton termButton = new JButton("Terminal");
         termButton.setVisible(true);
-        // launch terminal
-        // Process process = Runtime.getRuntime().exec("cmd /c start cmd.exe /K");
+        termButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent actionEvent) {
+                try {
+                    Process process = Runtime.getRuntime().exec("cmd /c start cmd.exe /K");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
 
 
         ManagerWindow.add(new ServerPanel(), BorderLayout.CENTER);
