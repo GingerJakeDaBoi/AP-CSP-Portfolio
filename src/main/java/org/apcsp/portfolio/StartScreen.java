@@ -3,7 +3,7 @@ package org.apcsp.portfolio;
 import java.awt.*;
 import javax.swing.*;
 
-public class StartScreen  extends ServerState {
+public class StartScreen extends ServerState {
     private final String[] LABELS={"System Resources","File Manager"};
 
     public StartScreen(ServerStateManager ssm){
@@ -25,7 +25,6 @@ public class StartScreen  extends ServerState {
 
             g.setFont(new Font("Arial",Font.BOLD,16));
             g.drawString(LABELS[i],25,150+i*300);
-
         }
     }
 
