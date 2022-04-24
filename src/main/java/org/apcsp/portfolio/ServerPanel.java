@@ -6,7 +6,7 @@ import java.awt.*;
 public class ServerPanel extends JPanel implements Runnable{
     private boolean isRunning = false;
     public static final int width = 800;
-    public static final int height = 900;
+    public static final int height = 600;
     private Thread thread;
     private ServerStateManager ssm;
 

@@ -1,9 +1,10 @@
 package org.apcsp.portfolio;
 
 import java.awt.*;
+import javax.swing.*;
 
 public class StartScreen  extends ServerState {
-    private final String[] LABELS={"Terminal","System Resources","File Manager"};
+    private final String[] LABELS={"System Resources","File Manager"};
 
     public StartScreen(ServerStateManager ssm){
         super(ssm);
@@ -14,16 +15,17 @@ public class StartScreen  extends ServerState {
     }
 
     public void draw(Graphics g) {
+        //Set the background color
         g.setColor(new Color(93, 93, 93, 255));
         g.fillRect(0,0,ServerPanel.width,ServerPanel.height);
-        g.setColor(new Color(0, 0, 0, 255));
-        g.fillRect(300,20,480,275);
 
+        //Draw the labels, look at the top for the list
         for(int i = 0; i < LABELS.length; i++) {
             g.setColor(Color.white);
 
             g.setFont(new Font("Arial",Font.BOLD,16));
-            g.drawString(LABELS[i],25,175+i*300);
+            g.drawString(LABELS[i],25,150+i*300);
+
         }
     }
 
