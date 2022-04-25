@@ -70,7 +70,7 @@ public class Project extends JPanel {
         fileManager.addActionListener(actionEvent -> {
             frame.pack();
             frame.setVisible(true);
-            frame.setPreferredSize(new Dimension(140, 475));
+            frame.setPreferredSize(new Dimension(130, 443));
         });
 
         //show the window and set up its properties
