@@ -32,7 +32,7 @@ public class StartScreen extends ServerState {
 
             //Category Labels
             g.setFont(new Font("Arial",Font.BOLD,16));
-            g.drawString(LABELS[i],25,80+i*300);
+            g.drawString(LABELS[i],25,80+i*225);
 
             //OS name and version
             g.setFont(new Font("Arial",Font.PLAIN,12));
