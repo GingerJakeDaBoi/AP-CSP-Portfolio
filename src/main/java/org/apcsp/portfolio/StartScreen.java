@@ -3,18 +3,12 @@ package org.apcsp.portfolio;
 import java.awt.*;
 import java.io.File;
 import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryMXBean;
-import java.lang.management.MemoryManagerMXBean;
 import java.lang.management.OperatingSystemMXBean;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.text.AttributedCharacterIterator;
 import java.text.MessageFormat;
-import javax.swing.*;
 
 public class StartScreen extends ServerState {
     OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
-    private final String[] LABELS={"System Resources","Process List"};
+    private final String[] LABELS={"System Resources"};
 
     public StartScreen(ServerStateManager ssm){
         super(ssm);
