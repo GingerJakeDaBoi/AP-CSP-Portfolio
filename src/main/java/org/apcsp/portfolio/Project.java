@@ -7,7 +7,8 @@ import java.io.IOException;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-public class Project {
+
+public class Project extends JPanel {
 
     public static void main(String[] args) throws IOException {
         // Create and set up the window.
