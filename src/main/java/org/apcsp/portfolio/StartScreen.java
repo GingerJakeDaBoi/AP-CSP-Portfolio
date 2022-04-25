@@ -1,9 +1,11 @@
 package org.apcsp.portfolio;
 
 import java.awt.*;
+import java.io.File;
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.lang.management.OperatingSystemMXBean;
+import java.text.AttributedCharacterIterator;
 import java.text.MessageFormat;
 import javax.swing.*;
 
@@ -30,8 +32,7 @@ public class StartScreen extends ServerState {
 
             //Category Labels
             g.setFont(new Font("Arial",Font.BOLD,16));
-            g.drawString(LABELS[i],25,150+i*300);
-
+            g.drawString(LABELS[i],25,80+i*300);
 
             //OS name and version
             g.setFont(new Font("Arial",Font.PLAIN,12));
@@ -40,10 +41,15 @@ public class StartScreen extends ServerState {
 
             // CPU usage
             g.setFont(new Font("Arial",Font.PLAIN,16));
-            g.drawString("CPU Count: "+ String.valueOf(Runtime.getRuntime().availableProcessors()),25,180);
-            g.drawString("Average CPU Usage: "+String.valueOf(MessageFormat.format("{0}%", operatingSystemMXBean.getSystemLoadAverage()%2f)),200,180);
+            g.drawString("CPU Count: "+ String.valueOf(Runtime.getRuntime().availableProcessors()),25,125);
+            g.drawString("Average CPU Usage: "+String.valueOf(MessageFormat.format("{0}%", operatingSystemMXBean.getSystemLoadAverage()%2f)),175,125);
+
+            // Disk usage
+            File root = new File("/");
+            g.drawString("Total space: "+root.getTotalSpace()/1073741824+" GB",425,125);
+            g.drawString("Free space: "+root.getFreeSpace()/1073741824+" GB",600,125);
+            }
         }
-    }
 
     public void tick() {
 
