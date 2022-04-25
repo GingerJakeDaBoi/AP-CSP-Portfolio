@@ -21,7 +21,7 @@ public class Project extends JPanel {
         termButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    Process process = Runtime.getRuntime().exec("gnome-terminal"); //TODO: Replace gnome-terminal with Windows CMD with the "cmd /c start cmd.exe /K" command, should probably change this later so that you can do it on both systems
+                    Process process = Runtime.getRuntime().exec("cmd /c start cmd.exe /K"); //TODO: Replace gnome-terminal with Windows CMD with the "cmd /c start cmd.exe /K" command, should probably change this later so that you can do it on both systems
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

@@ -11,7 +11,7 @@ import javax.swing.*;
 
 public class StartScreen extends ServerState {
     OperatingSystemMXBean operatingSystemMXBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-    private final String[] LABELS={"System Resources","File Manager"};
+    private final String[] LABELS={"System Resources","Process List"};
 
     public StartScreen(ServerStateManager ssm){
         super(ssm);
@@ -41,13 +41,13 @@ public class StartScreen extends ServerState {
 
             // CPU usage
             g.setFont(new Font("Arial",Font.PLAIN,16));
-            g.drawString("CPU Count: "+ String.valueOf(Runtime.getRuntime().availableProcessors()),25,125);
-            g.drawString("Average CPU Usage: "+String.valueOf(MessageFormat.format("{0}%", operatingSystemMXBean.getSystemLoadAverage()%2f)),175,125);
+            g.drawString("CPU Count: "+ String.valueOf(Runtime.getRuntime().availableProcessors()),25,105);
+            g.drawString("Average CPU Usage: "+String.valueOf(MessageFormat.format("{0}%", operatingSystemMXBean.getSystemLoadAverage()%2f)),175,105);
 
             // Disk usage
             File root = new File("/");
-            g.drawString("Total space: "+root.getTotalSpace()/1073741824+" GB",425,125);
-            g.drawString("Free space: "+root.getFreeSpace()/1073741824+" GB",600,125);
+            g.drawString("Total space: "+root.getTotalSpace()/1073741824+" GB",425,105);
+            g.drawString("Free space: "+root.getFreeSpace()/1073741824+" GB",600,105);
             }
         }
 
