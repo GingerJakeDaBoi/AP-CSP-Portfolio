@@ -100,11 +100,9 @@ public class CPUGraph extends JPanel {
         for (int i = 0; i < maxDataPoints ; i++) {
             scores.add(random.nextInt(maxScore));
         }
-        DrawGraph mainPanel = new DrawGraph(scores);
 
         JFrame frame = new JFrame("DrawGraph");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(mainPanel);
         frame.pack();
         frame.setLocationByPlatform(true);
         frame.setVisible(true);
