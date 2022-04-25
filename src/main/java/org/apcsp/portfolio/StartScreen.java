@@ -3,11 +3,11 @@ package org.apcsp.portfolio;
 import java.awt.*;
 import java.io.File;
 import java.lang.management.ManagementFactory;
-import java.lang.management.OperatingSystemMXBean;
+import com.sun.management.OperatingSystemMXBean;
 import java.text.MessageFormat;
 
 public class StartScreen extends ServerState {
-    OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
+    OperatingSystemMXBean operatingSystemMXBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
     private final String[] LABELS={"System Resources"};
 
     public StartScreen(ServerStateManager ssm){
