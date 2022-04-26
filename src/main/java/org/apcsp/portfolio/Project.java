@@ -59,8 +59,8 @@ public class Project extends JPanel {
         frame.setSize(300, 300);
         frame.setLocation(100, 100);
         frame.pack();
-        frame.setPreferredSize(new Dimension(130, 443));
-        frame.setResizable(false);
+        frame.setPreferredSize(new Dimension(500, 500));
+        frame.setResizable(true);
 
         //Button
         JButton fileManager = new JButton("Files");
@@ -70,7 +70,7 @@ public class Project extends JPanel {
         fileManager.addActionListener(actionEvent -> {
             frame.pack();
             frame.setVisible(true);
-            frame.setPreferredSize(new Dimension(130, 443));
+            frame.setPreferredSize(new Dimension(500, 500));
         });
 
         //show the window and set up its properties
