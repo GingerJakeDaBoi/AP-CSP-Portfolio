@@ -11,7 +11,11 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
-public class Project extends JPanel {
+public class Project extends LineChart_AWT {
+
+    public Project(String applicationTitle, String chartTitle) {
+        super(applicationTitle, chartTitle);
+    }
 
     public static void main(String[] args) {
         // Create and set up the window.
@@ -40,7 +44,7 @@ public class Project extends JPanel {
             }
         });
 
-        File fileRoot = new File("/");
+        File fileRoot = new File("C:/Users/Jacob/Downloads");
 
         DefaultMutableTreeNode root = new DefaultMutableTreeNode(fileRoot);
         DefaultTreeModel model = new DefaultTreeModel(root);
