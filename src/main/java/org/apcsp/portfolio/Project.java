@@ -4,6 +4,7 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.ui.RefineryUtilities;
 
 import java.awt.*;
 import java.io.File;
@@ -38,23 +39,21 @@ public class Project extends LineChart_AWT {
             }
         });
 
-        class LineChart_AWT{
+        final LineChart_AWT[] chart = new LineChart_AWT[1];
+        class LineChart_AWT {
+            public LineChart_AWT(String applicationTitle, String chartTitle) {
+                JFreeChart lineChart = ChartFactory.createLineChart(chartTitle, "Cpu usage", "CPU Usage", createDataset(), PlotOrientation.VERTICAL, true, true, false);
+                ChartPanel chartPanel = new ChartPanel(lineChart);
+                chartPanel.setPreferredSize(new java.awt.Dimension(420, 210));
 
-            public LineChart_AWT( String applicationTitle , String chartTitle ) {
-
-                JFreeChart lineChart = ChartFactory.createLineChart(chartTitle, "Cpu usage", "CPU Usage", createDataset(), PlotOrientation.VERTICAL, true,true,false);
-
-                ChartPanel chartPanel = new ChartPanel( lineChart );
-                chartPanel.setPreferredSize( new java.awt.Dimension( 420 , 210 ) );
-
+                org.apcsp.portfolio.LineChart_AWT chart = new org.apcsp.portfolio.LineChart_AWT("Cpu usage", "Cpu usage");
+                chart.pack();
+                RefineryUtilities.centerFrameOnScreen(chart);
+                chart.setVisible(true);
+                ManagerWindow.add(chart,BorderLayout.SOUTH);
             }
 
-
-
-
-
         }
-
 
 
         JPanel panel = new JPanel();
@@ -62,9 +61,9 @@ public class Project extends LineChart_AWT {
         panel.add(new JScrollPane(browser));
         JButton btn = new JButton("Expand all");
         btn.addActionListener(ae -> {
-            for (Enumeration<? extends TreeNode> e = ((TreeNode)browser.getModel().getRoot()).children(); e.hasMoreElements();) {
-                TreeNode tn = (TreeNode)e.nextElement();
-                browser.expandPath(new TreePath(((DefaultTreeModel)browser.getModel()).getPathToRoot(tn)));
+            for (Enumeration<? extends TreeNode> e = ((TreeNode) browser.getModel().getRoot()).children(); e.hasMoreElements(); ) {
+                TreeNode tn = (TreeNode) e.nextElement();
+                browser.expandPath(new TreePath(((DefaultTreeModel) browser.getModel()).getPathToRoot(tn)));
             }
         });
 
@@ -90,13 +89,7 @@ public class Project extends LineChart_AWT {
             }
         }
 
-
-
-
         browser.setModel(model);
-
-
-
 
         panel.add(btn, BorderLayout.SOUTH);
         JFrame frame = new JFrame("");
@@ -127,8 +120,6 @@ public class Project extends LineChart_AWT {
         //show the terminal and file manager buttons
         ManagerWindow.add(termButton, BorderLayout.NORTH);
         ManagerWindow.add(fileManager, BorderLayout.SOUTH);
-
-
 
 
     }

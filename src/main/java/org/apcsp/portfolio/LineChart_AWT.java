@@ -16,12 +16,6 @@ public class LineChart_AWT extends ApplicationFrame {
         return new DefaultCategoryDataset( );
     }
 
-    public static void main( String[ ] args ) {
-        LineChart_AWT chart = new LineChart_AWT("Cpu usage" , "Cpu usage");
-        chart.pack( );
-        RefineryUtilities.centerFrameOnScreen( chart );
-        chart.setVisible( true );
-    }
 }
 
 //TODO: initialize line chart to start
