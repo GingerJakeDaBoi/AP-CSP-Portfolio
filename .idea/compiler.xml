@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="AP-CSP-Portfolio" target="18" />
+      <module name="AP-CSP-Portfolio" target="17" />
       <module name="portfolio" target="18" />
     </bytecodeTargetLevel>
   </component>

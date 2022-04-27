@@ -1,5 +1,10 @@
 package org.apcsp.portfolio;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -32,6 +37,25 @@ public class Project extends LineChart_AWT {
                 throw new RuntimeException(e);
             }
         });
+
+        class LineChart_AWT{
+
+            public LineChart_AWT( String applicationTitle , String chartTitle ) {
+
+                JFreeChart lineChart = ChartFactory.createLineChart(chartTitle, "Cpu usage", "CPU Usage", createDataset(), PlotOrientation.VERTICAL, true,true,false);
+
+                ChartPanel chartPanel = new ChartPanel( lineChart );
+                chartPanel.setPreferredSize( new java.awt.Dimension( 420 , 210 ) );
+
+            }
+
+
+
+
+
+        }
+
+
 
         JPanel panel = new JPanel();
         final JTree browser = new JTree();
@@ -66,7 +90,13 @@ public class Project extends LineChart_AWT {
             }
         }
 
+
+
+
         browser.setModel(model);
+
+
+
 
         panel.add(btn, BorderLayout.SOUTH);
         JFrame frame = new JFrame("");
@@ -97,5 +127,9 @@ public class Project extends LineChart_AWT {
         //show the terminal and file manager buttons
         ManagerWindow.add(termButton, BorderLayout.NORTH);
         ManagerWindow.add(fileManager, BorderLayout.SOUTH);
+
+
+
+
     }
 }
