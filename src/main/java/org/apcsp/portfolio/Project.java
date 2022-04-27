@@ -44,7 +44,7 @@ public class Project extends LineChart_AWT {
             }
         });
 
-        File fileRoot = new File("C:/Users/Jacob/Downloads");
+        File fileRoot = new File("/");
 
         DefaultMutableTreeNode root = new DefaultMutableTreeNode(fileRoot);
         DefaultTreeModel model = new DefaultTreeModel(root);
