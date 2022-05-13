@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AP-CSP-Portfolio.iml" filepath="$PROJECT_DIR$/.idea/AP-CSP-Portfolio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/portfolio.iml" filepath="$PROJECT_DIR$/portfolio.iml" />
     </modules>
   </component>
 </project>

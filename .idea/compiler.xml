@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="portfolio" />
         <module name="AP-CSP-Portfolio" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AP-CSP-Portfolio" target="17" />
-      <module name="portfolio" target="18" />
+      <module name="portfolio" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
