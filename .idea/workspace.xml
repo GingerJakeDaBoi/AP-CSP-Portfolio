@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50f17b20-55a3-4ffc-be96-b70aa5d20447" name="Changes" comment="idea is complaining">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="50f17b20-55a3-4ffc-be96-b70aa5d20447" name="Changes" comment="make terminal work on Windows">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/portfolio_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/apcsp/portfolio/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/apcsp/portfolio/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.org.apcsp.portfolio.Project">
     <configuration name="org.apcsp.portfolio.Project" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-18" />
@@ -76,6 +73,10 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="portfolio-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/portfolio-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="AP-CSP-Portfolio" />
@@ -118,11 +119,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.org.apcsp.portfolio.Project" />
+      <item itemvalue="JAR Application.portfolio-1.0-SNAPSHOT.jar" />
       <item itemvalue="Maven.portfolio [compile,-U]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.org.apcsp.portfolio.Project" />
+        <item itemvalue="JAR Application.portfolio-1.0-SNAPSHOT.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652453838833</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="make terminal work on Windows">
+      <created>1652454115738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652454115738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,7 +195,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -198,6 +220,7 @@
     <MESSAGE value="Fix all the errors" />
     <MESSAGE value="Merge gui to main since project is done" />
     <MESSAGE value="idea is complaining" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea is complaining" />
+    <MESSAGE value="make terminal work on Windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="make terminal work on Windows" />
   </component>
 </project>
