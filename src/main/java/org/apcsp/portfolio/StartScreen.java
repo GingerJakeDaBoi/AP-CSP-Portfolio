@@ -40,8 +40,7 @@ public class StartScreen extends ServerState {
 
             // CPU usage
             g.setFont(new Font("Arial", Font.PLAIN, 16));
-            g.drawString("CPU Count: " + String.valueOf(Runtime.getRuntime().availableProcessors()), 25, 105);
-            g.drawString("Average CPU Usage: " + String.valueOf(MessageFormat.format("{0}%", operatingSystemMXBean.getSystemLoadAverage() % 2f)), 175, 105);
+            g.drawString("CPU Count: " + Runtime.getRuntime().availableProcessors(), 25, 105);
 
             // Disk usage
             File root = new File("/");
