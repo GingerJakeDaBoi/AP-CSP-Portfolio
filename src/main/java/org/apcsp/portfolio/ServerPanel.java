@@ -9,7 +9,6 @@ public class ServerPanel extends JPanel implements Runnable{
     public static final int width = 800; //Window Width
     public static final int height = 600; //Window Height
     private ServerStateManager ssm;
-    private final int FPS = 60;
 
     public ServerPanel() {
         setPreferredSize(new Dimension(width,height));
@@ -42,6 +41,7 @@ public class ServerPanel extends JPanel implements Runnable{
             repaint();
 
             elapsed = System.nanoTime()-start;
+            int FPS = 60;
             long TARGET_TIME = 1000 / FPS;
             wait = (TARGET_TIME -elapsed) / 1000000;
 
