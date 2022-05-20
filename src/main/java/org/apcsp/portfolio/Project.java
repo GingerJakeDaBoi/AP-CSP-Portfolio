@@ -10,14 +10,11 @@ public class Project {
         JFrame ManagerWindow = new JFrame("Manager");
         ManagerWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
-
         //show the window and set up its properties
         ManagerWindow.add(new ServerPanel(), BorderLayout.CENTER);
         ManagerWindow.setResizable(false);
         ManagerWindow.pack();
         ManagerWindow.setVisible(true);
-
 
     }
 }

@@ -30,12 +30,12 @@ public class StartScreen extends ServerState {
 
             //Category Labels
             g.setFont(new Font("Arial", Font.BOLD, 16));
-            g.drawString(LABELS[i], 25, 80 + i * 225);
+            g.drawString(LABELS[i], 25, 40 + i * 225);
 
             //OS name and version
             g.setFont(new Font("Arial", Font.PLAIN, 16));
-            g.drawString(System.getProperty("os.name"), 25, 108);
-            g.drawString(System.getProperty("os.version"), 25, 133);
+            g.drawString(System.getProperty("os.name"), 25, 68);
+            g.drawString(System.getProperty("os.version"), 25, 93);
 
             // CPU Arch
             g.setFont(new Font("Arial",Font.PLAIN, 12));
@@ -44,8 +44,8 @@ public class StartScreen extends ServerState {
             // Disk usage
             File root = new File("/");
             g.setFont(new Font("Arial", Font.PLAIN, 16));
-            g.drawString("Total space: " + root.getTotalSpace() / 1073741824 + " GB", 25, 335);
-            g.drawString("Free space: " + root.getFreeSpace() / 1073741824 + " GB", 200, 335);
+            g.drawString("Total space: " + root.getTotalSpace() / 1073741824 + " GB", 25, 295);
+            g.drawString("Free space: " + root.getFreeSpace() / 1073741824 + " GB", 200, 295);
         }
     }
     public void tick() {
