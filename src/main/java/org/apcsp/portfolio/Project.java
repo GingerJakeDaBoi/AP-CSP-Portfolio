@@ -1,27 +1,17 @@
 package org.apcsp.portfolio;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.ui.RefineryUtilities;
-
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-import java.util.Enumeration;
-import java.util.Objects;
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Objects;
 
-public class Project extends LineChart_AWT {
-
-    public Project(String applicationTitle, String chartTitle) {
-        super(applicationTitle, chartTitle);
-    }
+public class Project {
 
     public static void main(String[] args) {
         // Create and set up the window.
@@ -33,28 +23,11 @@ public class Project extends LineChart_AWT {
         termButton.setVisible(true);
         termButton.addActionListener(actionEvent -> {
             try {
-                Process process = Runtime.getRuntime().exec("gnome-terminal"); //TODO: Replace gnome-terminal with Windows CMD with the "cmd /c start cmd.exe /K" command, should probably change this later so that you can do it on both systems
+                Runtime.getRuntime().exec("cmd /c start cmd.exe /K");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-
-        final LineChart_AWT[] chart = new LineChart_AWT[1];
-        class LineChart_AWT {
-            public LineChart_AWT(String applicationTitle, String chartTitle) {
-                JFreeChart lineChart = ChartFactory.createLineChart(chartTitle, "Cpu usage", "CPU Usage", createDataset(), PlotOrientation.VERTICAL, true, true, false);
-                ChartPanel chartPanel = new ChartPanel(lineChart);
-                chartPanel.setPreferredSize(new java.awt.Dimension(420, 210));
-
-                org.apcsp.portfolio.LineChart_AWT chart = new org.apcsp.portfolio.LineChart_AWT("Cpu usage", "Cpu usage");
-                chart.pack();
-                RefineryUtilities.centerFrameOnScreen(chart);
-                chart.setVisible(true);
-                ManagerWindow.add(chart,BorderLayout.SOUTH);
-            }
-
-        }
-
 
         JPanel panel = new JPanel();
         final JTree browser = new JTree();
@@ -62,7 +35,7 @@ public class Project extends LineChart_AWT {
         JButton btn = new JButton("Expand all");
         btn.addActionListener(ae -> {
             for (Enumeration<? extends TreeNode> e = ((TreeNode) browser.getModel().getRoot()).children(); e.hasMoreElements(); ) {
-                TreeNode tn = (TreeNode) e.nextElement();
+                TreeNode tn = e.nextElement();
                 browser.expandPath(new TreePath(((DefaultTreeModel) browser.getModel()).getPathToRoot(tn)));
             }
         });
