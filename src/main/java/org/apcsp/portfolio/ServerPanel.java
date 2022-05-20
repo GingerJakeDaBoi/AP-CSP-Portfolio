@@ -8,10 +8,8 @@ public class ServerPanel extends JPanel implements Runnable{
     private boolean isRunning = false;
     public static final int width = 800; //Window Width
     public static final int height = 600; //Window Height
-    private Thread thread;
     private ServerStateManager ssm;
     private final int FPS = 60;
-    private final long TARGET_TIME=1000/FPS;
 
     public ServerPanel() {
         setPreferredSize(new Dimension(width,height));
@@ -21,7 +19,7 @@ public class ServerPanel extends JPanel implements Runnable{
 
     private void start() {
         isRunning = true;
-        thread = new Thread(this);
+        Thread thread = new Thread(this);
         thread.start();
     }
 
@@ -44,7 +42,8 @@ public class ServerPanel extends JPanel implements Runnable{
             repaint();
 
             elapsed = System.nanoTime()-start;
-            wait = (TARGET_TIME-elapsed) / 1000000;
+            long TARGET_TIME = 1000 / FPS;
+            wait = (TARGET_TIME -elapsed) / 1000000;
 
             if(wait <=0) wait = 5;
             try {
