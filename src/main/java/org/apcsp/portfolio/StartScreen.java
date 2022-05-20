@@ -9,7 +9,7 @@ import java.text.MessageFormat;
 
 public class StartScreen extends ServerState {
     OperatingSystemMXBean operatingSystemMXBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-    private final String[] LABELS={"System Resources"};
+    private final String[] LABELS={"Operating System", "Storage"};
 
     public StartScreen(ServerStateManager ssm){
         super(ssm);
@@ -21,7 +21,7 @@ public class StartScreen extends ServerState {
 
     public void draw(Graphics g) {
         //Set the background color
-        g.setColor(new Color(93, 93, 93, 255));
+        g.setColor(new Color(128, 122, 122, 255));
         g.fillRect(0, 0, ServerPanel.width, ServerPanel.height);
 
         //Draw the labels, look at the top for the list
@@ -33,22 +33,24 @@ public class StartScreen extends ServerState {
             g.drawString(LABELS[i], 25, 80 + i * 225);
 
             //OS name and version
-            g.setFont(new Font("Arial", Font.PLAIN, 12));
-            g.drawString(System.getProperty("os.name"), 10, 20);
-            g.drawString(System.getProperty("os.version"), 10, 40);
-            g.drawString(System.getProperty("os.arch"),755,20);
-
-            // CPU usage
             g.setFont(new Font("Arial", Font.PLAIN, 16));
-            g.drawString("CPU Count: " + Runtime.getRuntime().availableProcessors(), 25, 105);
+            g.drawString(System.getProperty("os.name"), 25, 108);
+            g.drawString(System.getProperty("os.version"), 25, 133);
+
+            // CPU Arch
+            g.setFont(new Font("Arial",Font.PLAIN, 12));
+            g.drawString(System.getProperty("os.arch"),755,20);
 
             // Disk usage
             File root = new File("/");
-            g.drawString("Total space: " + root.getTotalSpace() / 1073741824 + " GB", 425, 105);
-            g.drawString("Free space: " + root.getFreeSpace() / 1073741824 + " GB", 600, 105);
+            g.setFont(new Font("Arial", Font.PLAIN, 16));
+            g.drawString("Total space: " + root.getTotalSpace() / 1073741824 + " GB", 25, 335);
+            g.drawString("Free space: " + root.getFreeSpace() / 1073741824 + " GB", 200, 335);
         }
     }
     public void tick() {
 
     }
+
+
 }
