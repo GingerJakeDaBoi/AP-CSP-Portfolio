@@ -7,29 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a968f09c-0587-4cbb-ad87-1c7116f892f9" name="Changes" comment="remove maven">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/gingerjake/apcsp/portfolio/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AP-CSP-Portfolio.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="a968f09c-0587-4cbb-ad87-1c7116f892f9" name="Changes" comment="set up gradle and remove unused linegraph class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/LineChart_AWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gingerjake/apcsp/portfolio/LineChart_AWT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gingerjake/apcsp/portfolio/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/ServerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gingerjake/apcsp/portfolio/ServerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/ServerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gingerjake/apcsp/portfolio/ServerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/ServerStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gingerjake/apcsp/portfolio/ServerStateManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apcsp/portfolio/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gingerjake/apcsp/portfolio/StartScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +23,28 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AP-CSP-Portfolio" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AP-CSP-Portfolio" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AP-CSP-Portfolio" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -121,7 +119,7 @@
       <command value="mvn -U idea:idea" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.AP-CSP-Portfolio [jar]">
     <configuration name="AP-CSP-Portfolio [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -143,8 +141,30 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AP-CSP-Portfolio [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AP-CSP-Portfolio [jar]" />
         <item itemvalue="Gradle.AP-CSP-Portfolio [build]" />
       </list>
     </recent_temporary>
@@ -326,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655852308009</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="set up gradle and remove unused linegraph class">
+      <created>1655852696732</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1655852696732</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -357,7 +384,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="IntelliJ IDEA configuration" />
     <MESSAGE value="setup idea" />
     <MESSAGE value="Setup proper windowing" />
     <MESSAGE value="Finally, draw a black box for terminal" />
@@ -382,6 +408,7 @@
     <MESSAGE value="Fix all the chart errors" />
     <MESSAGE value="Fix all the chart errors and add chart to main window (still not showing anything)" />
     <MESSAGE value="remove maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove maven" />
+    <MESSAGE value="set up gradle and remove unused linegraph class" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up gradle and remove unused linegraph class" />
   </component>
 </project>

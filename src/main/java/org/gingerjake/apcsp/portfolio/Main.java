@@ -23,7 +23,7 @@ public class Main {
         termButton.setVisible(true);
         termButton.addActionListener(actionEvent -> {
             try {
-                Process process = Runtime.getRuntime().exec("cmd /c start cmd.exe /K"); //TODO: Replace gnome-terminal with Windows CMD with the "cmd /c start cmd.exe /K" command, should probably change this later so that you can do it on both systems
+                Runtime.getRuntime().exec("cmd /c start cmd.exe /K");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -35,7 +35,7 @@ public class Main {
         JButton btn = new JButton("Expand all");
         btn.addActionListener(ae -> {
             for (Enumeration<? extends TreeNode> e = ((TreeNode) browser.getModel().getRoot()).children(); e.hasMoreElements(); ) {
-                TreeNode tn = (TreeNode) e.nextElement();
+                TreeNode tn = e.nextElement();
                 browser.expandPath(new TreePath(((DefaultTreeModel) browser.getModel()).getPathToRoot(tn)));
             }
         });
