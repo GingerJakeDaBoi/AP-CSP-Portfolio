@@ -1,10 +1,4 @@
-package org.apcsp.portfolio;
-
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.ui.RefineryUtilities;
+package org.gingerjake.apcsp.portfolio;
 
 import java.awt.*;
 import java.io.File;
@@ -17,11 +11,7 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
-public class Project extends LineChart_AWT {
-
-    public Project(String applicationTitle, String chartTitle) {
-        super(applicationTitle, chartTitle);
-    }
+public class Main {
 
     public static void main(String[] args) {
         // Create and set up the window.
@@ -38,23 +28,6 @@ public class Project extends LineChart_AWT {
                 throw new RuntimeException(e);
             }
         });
-
-        final LineChart_AWT[] chart = new LineChart_AWT[1];
-        class LineChart_AWT {
-            public LineChart_AWT(String applicationTitle, String chartTitle) {
-                JFreeChart lineChart = ChartFactory.createLineChart(chartTitle, "Cpu usage", "CPU Usage", createDataset(), PlotOrientation.VERTICAL, true, true, false);
-                ChartPanel chartPanel = new ChartPanel(lineChart);
-                chartPanel.setPreferredSize(new java.awt.Dimension(420, 210));
-
-                org.apcsp.portfolio.LineChart_AWT chart = new org.apcsp.portfolio.LineChart_AWT("Cpu usage", "Cpu usage");
-                chart.pack();
-                RefineryUtilities.centerFrameOnScreen(chart);
-                chart.setVisible(true);
-                ManagerWindow.add(chart,BorderLayout.SOUTH);
-            }
-
-        }
-
 
         JPanel panel = new JPanel();
         final JTree browser = new JTree();

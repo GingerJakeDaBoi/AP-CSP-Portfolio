@@ -1,4 +1,4 @@
-package org.apcsp.portfolio;
+package org.gingerjake.apcsp.portfolio;
 
 import javax.swing.*;
 import java.awt.*;

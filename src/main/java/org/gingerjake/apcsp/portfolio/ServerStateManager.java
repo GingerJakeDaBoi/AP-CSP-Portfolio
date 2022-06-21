@@ -1,4 +1,4 @@
-package org.apcsp.portfolio;
+package org.gingerjake.apcsp.portfolio;
 
 import java.awt.*;
 import java.util.Stack;
